@@ -41,3 +41,36 @@ function Delete(){
     page.style.display = "none";
     newPage[0].style.display = "flex";
 }
+
+//*********exs2******************
+var termCountry = {
+    Belarus: 2,
+    Slovakia: 3,
+    Germania: 5,
+    France: 10,
+    Poland: 7
+}
+
+function Term(){
+    var sum = 0;
+    for (var key in termCountry){
+        sum += termCountry[key];
+    }
+    average = sum / Object.keys(termCountry).length;
+    alert("Среднее значение температуры всех стран: " + average);
+}
+
+Term();
+
+//*********exs3*********************
+
+function maxTerm(){
+    var max = 0;
+    for(var key in termCountry){
+        if(termCountry[key]>max)
+        max = termCountry[key];
+    }
+    alert("Максимальная температура в " + max +"°C")
+}
+
+maxTerm();
