@@ -46,7 +46,7 @@ function Delete(){
 var termCountry = {
     Belarus: 2,
     Slovakia: 3,
-    Germania: 5,
+    Germania: 15,
     France: 10,
     Poland: 7
 }
@@ -64,13 +64,13 @@ Term();
 
 //*********exs3*********************
 
-function maxTerm(){
+function maxTerm(term){
     var max = 0;
-    for(var key in termCountry){
-        if(termCountry[key]>max)
-        max = termCountry[key];
+    for(var key in term){
+        if(term[key]>max)
+        max = term[key];
     }
     alert("Максимальная температура в " + max +"°C")
 }
 
-maxTerm();
+maxTerm(termCountry);
